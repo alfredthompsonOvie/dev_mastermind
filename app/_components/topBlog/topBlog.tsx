@@ -26,18 +26,18 @@ interface Blog {
 type TopBlogProps = {
 	topblogs: Blog[];
 }
-export default function TopBlog({ topblogs }: TopBlogProps) {
-  const [filteredBlogs, setFilteredBlogs] = useState(()=> topblogs || [])
+export default function TopBlog() {
+  // const [filteredBlogs, setFilteredBlogs] = useState(()=> topblogs || [])
 	const [isActiveTab, setIsActiveTab] = useState("all")
 	
-	const categories = topblogs.filter((item: any) => item.category);
-	console.log("top==>>",topblogs)
-	console.log("cat==>>",categories)
+	// const categories = topblogs.filter((item: any) => item.category);
+	// console.log("top==>>",topblogs)
+	// console.log("cat==>>",categories)
 
   function filterBlogsBy(category: string) {
-    const result: any = filteredBlogs.filter((blog: any) => blog.category === category)
+    // const result: any = filteredBlogs.filter((blog: any) => blog.category === category)
 
-    setFilteredBlogs(result)
+    // setFilteredBlogs(result)
     setIsActiveTab(category)
   }
 

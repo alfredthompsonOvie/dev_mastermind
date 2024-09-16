@@ -11,7 +11,7 @@ import BlogCardXsm from "@/app/_components/ui/blog-card-xsm";
 import { Dancing_Script, Pacifico } from "next/font/google";
 import Heading from "@/app/_components/ui/heading";
 import TopBlog from "./_components/topBlog/topBlog";
-import { getBlogs } from "./actions/blogs";
+// import { getBlogs } from "./actions/blogs";
 
 const SCREEN_SIZE = 850;
 const dancingScript = Dancing_Script({ subsets: ["latin"] });
@@ -30,14 +30,14 @@ export default async function Home() {
 	const [mainNews, ...moreNews] = data.articles.slice(0, 4);
 
 
-	const blogs = await getBlogs();
+	// const blogs = await getBlogs();
 
-	// console.log("blogs=>>>", blogs)
+	// // console.log("blogs=>>>", blogs)
 	
-	const topblogs = blogs.filter(blog => (blog.isPopular === true) || (blog.isMustRead === true));
-	console.log("topblogs=>>>", topblogs)
-	const featured = blogs.filter((b: any) => b.isFeatured === true)
-	console.log("featured=>>>", featured)
+	// const topblogs = blogs.filter(blog => (blog.isPopular === true) || (blog.isMustRead === true));
+	// console.log("topblogs=>>>", topblogs)
+	// const featured = blogs.filter((b: any) => b.isFeatured === true)
+	// console.log("featured=>>>", featured)
 
 
 	return (
@@ -127,7 +127,7 @@ export default async function Home() {
 			{/* 2 popular post || Latest Blog || editors pick || must read */}
 			
 
-			<TopBlog topblogs={topblogs} />
+			<TopBlog />
 			{/* 3 feature posts */}
 			{/* =================================================== */}
 			{/* =================================================== */}
