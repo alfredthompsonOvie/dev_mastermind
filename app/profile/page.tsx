@@ -1,3 +1,4 @@
+"use client"
 import BlogCardDraft from "@/app/_components/ui/blog-card-draft";
 import BlogCardMd from "@/app/_components/ui/blog-card-md";
 import BlogCardMini from "@/app/_components/ui/blog-card-mini";
