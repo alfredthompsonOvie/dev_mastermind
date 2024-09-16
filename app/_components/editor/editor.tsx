@@ -2,11 +2,11 @@
 import dynamic from 'next/dynamic';
 import React, { useState } from "react";
 // Require Editor CSS files.
-import "froala-editor/css/froala_style.min.css";
-import "froala-editor/css/froala_editor.pkgd.min.css";
-import "froala-editor/css/plugins/code_view.min.css";
-import "froala-editor//css/themes/royal.min.css";
-import "froala-editor//css/themes/dark.min.css";
+// import "froala-editor/css/froala_style.min.css";
+// import "froala-editor/css/froala_editor.pkgd.min.css";
+// import "froala-editor/css/plugins/code_view.min.css";
+// import "froala-editor//css/themes/royal.min.css";
+// import "froala-editor//css/themes/dark.min.css";
 
 
 
@@ -18,11 +18,11 @@ const FroalaEditorView = dynamic(() => import('react-froala-wysiwyg/FroalaEditor
 });
 // import FroalaEditor from "react-froala-wysiwyg";
 // import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
-import "froala-editor/js/plugins/image.min.js";
-import "froala-editor/js/plugins/markdown.min.js";
-import "froala-editor/js/plugins/save.min.js";
-import "froala-editor/js/plugins/colors.min.js";
-import "froala-editor/js/plugins/code_view.min.js";
+// import "froala-editor/js/plugins/image.min.js";
+// import "froala-editor/js/plugins/markdown.min.js";
+// import "froala-editor/js/plugins/save.min.js";
+// import "froala-editor/js/plugins/colors.min.js";
+// import "froala-editor/js/plugins/code_view.min.js";
 
 import { SubmitHandler, useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
