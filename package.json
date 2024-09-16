@@ -9,18 +9,34 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.7"
+    "@heroicons/react": "^2.1.5",
+    "@hookform/resolvers": "^3.9.0",
+    "@tanstack/react-query": "^5.56.2",
+    "froala-editor": "^4.2.2",
+    "highlight.js": "^11.10.0",
+    "immutable": "^4.3.7",
+    "mongoose": "^8.6.2",
+    "next": "^14.2.11",
+    "prismjs": "^1.29.0",
+    "quill": "^2.0.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-froala-wysiwyg": "^4.2.2",
+    "react-hook-form": "^7.53.0",
+    "slate": "^0.103.0",
+    "slate-history": "^0.109.0",
+    "slate-react": "^0.110.0",
+    "yup": "^1.4.0",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "^14.2.11",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.7"
+    "typescript": "^5"
   }
 }
