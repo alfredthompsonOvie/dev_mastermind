@@ -1,5 +1,5 @@
 "use client";
-
+import dynamic from 'next/dynamic';
 import React, { useState } from "react";
 // Require Editor CSS files.
 import "froala-editor/css/froala_style.min.css";
@@ -8,8 +8,16 @@ import "froala-editor/css/plugins/code_view.min.css";
 import "froala-editor//css/themes/royal.min.css";
 import "froala-editor//css/themes/dark.min.css";
 
-import FroalaEditor from "react-froala-wysiwyg";
-import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
+
+
+const FroalaEditor = dynamic(() => import('react-froala-wysiwyg'), {
+  ssr: false, // Disable server-side rendering
+});
+const FroalaEditorView = dynamic(() => import('react-froala-wysiwyg/FroalaEditorView'), {
+  ssr: false, // Disable server-side rendering
+});
+// import FroalaEditor from "react-froala-wysiwyg";
+// import FroalaEditorView from "react-froala-wysiwyg/FroalaEditorView";
 import "froala-editor/js/plugins/image.min.js";
 import "froala-editor/js/plugins/markdown.min.js";
 import "froala-editor/js/plugins/save.min.js";
