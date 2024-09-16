@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { Suspense } from 'react'
 import ThemeToggler from "../ui/theme-toggler";
 import Hamburger from "../ui/hamburger";
 import { SCREEN_SIZE } from "@/app/_lib/constants";
@@ -48,6 +49,7 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
 	}, [pathname, searchParams]);
 
 	return (
+		<Suspense>
 		<nav className="bg-secondary text-text grid grid-cols-[1fr_10fr_1fr] z-50">
 			<section className="col-start-2 py-4 flex justify-between items-center gap-6 md:justify-start md:bg-transparent relative">
 				{/* Logo */}
@@ -93,7 +95,7 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
 								Blog
 							</Link>
 						</li>
-						<li>
+						{/* <li>
 							<Link
 								href="/news"
 								className={`hover:text-yellow-400 py-3 px-4 block ${
@@ -102,7 +104,7 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
 							>
 								News
 							</Link>
-						</li>
+						</li> */}
 						<li>
 							<Link
 								href="/contact"
@@ -227,5 +229,7 @@ export default function Navbar({ isLoggedIn }: { isLoggedIn: boolean }) {
 				</section>
 			</section>
 		</nav>
+
+		</Suspense>
 	);
 }
